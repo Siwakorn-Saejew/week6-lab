@@ -40,6 +40,7 @@ func main() {
 
     mux := http.NewServeMux()
     mux.HandleFunc("POST /api/auth/register", h.Register)
+    mux.HandleFunc("POST /api/auth/login", h.Login)
     mux.HandleFunc("GET /api/movies", h.SearchMovies)
     mux.HandleFunc("GET /api/me", login(h.Me))
     mux.HandleFunc("GET /api/genres", h.Genres)
